@@ -1,0 +1,35 @@
+This is the solution for proposal to yandex summer practice in 2014
+
+Target : (Novosibirsk, C++) Web browser development
+
+Candidate : Zakharov Konstantin, Tomsk SU of CSR student
+
+Task in short:
+
+    Develop a small Ñ++ library "Thread pool" for company needs. It must provide
+a functionality of managing thread count and queing tasks. Code must be written
+according to Google C++ style guide
+http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
+
+My comments:
+
+    It was really interesting task, I've solved several issues which was really
+unexpected for me. My code is an attempt to implement something like ZThread
+Runnable-class functionality using standart C++ classes (instead of
+platform-specific). This sources is awesome.
+http://zthread.sourceforge.net/
+
+I've tried to use something from this code
+http://habrahabr.ru/post/188234/
+but the result is just ThreadPool::kGreedy dispath method (not so good) and
+some of <mutex> usage. Ekkel volumes about multithreading is much better to study.
+
+Reading Google C++ styleguide increased my skills in C++. The thoughts about
+writing in one style was visiting my head during 7-8 months and now I've found
+the answers.
+
+As always, stackoverflow helped me a lot. For example - clock() function wasn't
+working on linux, and showed x2-3 execution time because of 4 threads execution
+(clock() uses proc ticks). But it became ok after rewriting timing with <chrono>.
+Also there was a moment when I've started writing a question (after 2-3 hours of
+debugging line "mutex_->lock()"), but found what's wrong by myself :)

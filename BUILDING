@@ -1,0 +1,18 @@
+Sources can be compiled in Visual Studio2012 +. Create new empty project
+of console app, or lib/dll. Add source (*.cc) files to project.
+Add "include" folder to  "Project->Properties->VC++ Catalouges". Push "Build".
+
+In order to use compiled dll in another project - add a reference
+and header files to it.
+
+Console apps:
+
+Compile given examples using compilation strings shown below.
+
+    MinGW 4.8.1+:
+	g++ -c examples/code.cc src/worker.cc src/thread_pool.cc -std=c++11
+	g++ -o code.exe code.o worker.o thread_pool.o
+
+    GNU C++ 4.8.1+:
+    g++ -c examples/code.cc src/worker.cc src/thread_pool.cc -std=c++11
+	g++ -o code.out code.o worker.o thread_pool.o -pthread

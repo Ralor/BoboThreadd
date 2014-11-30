@@ -1,0 +1,48 @@
+
+BoboThreadd 1.0 by
+Zakharov Konstantin aka Ralor
+<e-mail:zakharov.k.l@yandex.ru>
+<skype:ralor-real>
+
+OVERVIEW:
+
+    Concurrency is an increasingly important aspect of software today.
+The BoboThreadd package is a simple standart C++ classes wrapper which provides
+running your tasks in parralel. It provides a simple abstraction of the
+standart C++ threading mechanisms to offer an easy way to increase calculation
+speed or simplify your code.
+
+    This software features ThreadPool object for C++. It gives the opportunity to
+create runnable objects and run it in parallel using specified count of threads,
+when standart C++ thread allow you to just run callback functions.
+
+    This is a platform independent library due to using only std:: features. But
+compilation strings differs a little.
+
+    Library was tested under Windows 8 & Ubuntu 12.04LTS platforms. Since it uses
+Google C++ style http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
+C++11 standart support required.
+
+LICENSE:
+
+    This source has been released "As is". See LICENSE for details. In short - you
+can you use it as you want.
+
+DOCUMENTATION:
+
+    You can find UML diagram showing how to use the library, examples of usage
+and brief comments in library code.
+
+COMPILING:
+
+    Provided code was compiled with:
+        - VC 11.0
+        - MinGW 4.8.1
+        - GNU C++ 4.8.1
+
+    See BUILDING for details.
+
+NOTES:
+
+    Please report bugs to me via email. I'm checking it more often than vk.com account
+(I'm very proud of this).
